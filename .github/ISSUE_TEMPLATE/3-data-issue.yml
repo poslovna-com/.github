@@ -1,0 +1,41 @@
+name: Data issue
+description: A value about a company or person is wrong, missing or out of date.
+labels: ["data-quality"]
+projects: ["poslovna-com/1"]
+body:
+  - type: input
+    id: subject
+    attributes:
+      label: Subject
+      description: Name and OIB (or MBS / MBO), plus the page URL.
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      description: Which value, e.g. revenue 2024, officers, blockade status.
+    validations:
+      required: true
+  - type: textarea
+    id: shown
+    attributes:
+      label: What we show
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: What the source says
+      description: The source, a link, and the date you checked it. A claim without a source and a date cannot be acted on.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: How widespread
+      options:
+        - One subject
+        - Several subjects (list them above)
+        - Looks systematic
+        - Not sure

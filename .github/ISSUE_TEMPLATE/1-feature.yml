@@ -1,0 +1,42 @@
+name: Feature or request
+description: Something new, or a change to how something works.
+labels: ["feature"]
+projects: ["poslovna-com/1"]
+body:
+  - type: textarea
+    id: decided
+    attributes:
+      label: Decided
+      description: What is already decided, by whom and when, so nobody asks again.
+      placeholder: "The public company page shows five figures for the latest filed year. (Hrvoje, 26.10.2026)"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: The problem behind it. Link the doc or issue it comes from.
+    validations:
+      required: true
+  - type: textarea
+    id: ask
+    attributes:
+      label: The ask
+      description: What has to be built or changed, and any constraint that shapes it.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: What is true when this is finished, in a way anyone can check.
+  - type: input
+    id: due
+    attributes:
+      label: Needed by
+      placeholder: "15.11.2026, or none"
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Frontend, API & data, CRM, Clients, Docs, Ops]
